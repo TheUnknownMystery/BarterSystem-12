@@ -125,7 +125,6 @@ export default class login extends React.Component {
 
               })
 
-              //console.log(this.state.isVisible)
             }}>
 
               <Text style={{ alignSelf: 'center', marginTop: 6, fontWeight: 'bold' }}>Cancel</Text>
@@ -142,27 +141,34 @@ export default class login extends React.Component {
 
     if (Password !== ConfirmPassword) {
 
-      return alert("Password and ConfirmPassword are not same please check again")
+      return Aler.alert("Password and ConfirmPassword are not same please check again")
 
     } else {
 
       firebase.auth().createUserWithEmailAndPassword(Email, Password)
-
-        //working till here
         .then((response) => {
 
-          db.collection("Users").add({
+          db.collection("UserInfo").add({
 
-            'FirstName': this.state.FirstName,
-            'LastName': this.state.LastName,
-            'Address': this.state.address,
-            'Contact': this.state.ContactNumber,
-            'Password': this.state.Password,
-            'ConfirmPassword': this.state.ConfirmPassword
-
+            "FirstName": this.state.FirstName,
+            "LastName": this.state.LastName,
+            "Address": this.state.Address,
+            "Contact": this.state.ContactNumber,
+            "Password": this.state.Password,
+            "ConfirmPassword": this.state.ConfirmPassword,
+           
           });
 
-          return alert("Account created")
+          return Alert.alert(
+
+            "UserAdded",
+            "",
+            [
+
+              { text: 'Ok', onPress: () => this.setState({ isVisible: false }) }
+
+            ]
+          )
         })
 
         .catch(function (error) {
