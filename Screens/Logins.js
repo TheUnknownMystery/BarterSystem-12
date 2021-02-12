@@ -191,7 +191,7 @@ export default class login extends React.Component {
         if (response) {
 
           alert("Login Sucessful")
-          //this.props.navigation.navigate()
+          this.props.navigation.navigate("HomePage")
 
         }
       }
@@ -280,7 +280,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderWidth: 1.5,
     marginTop: 40,
-    width: 260,
+    width: 240,
     borderRadius: 2,
     height: 40
   },
