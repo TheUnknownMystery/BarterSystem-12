@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
-import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { BottomTabBar, createBottomTabNavigator } from 'react-navigation-tabs'
 import LoginScreen from './Screens/Logins'
 import Home from './Screens/Home'
 import Exchange from './Screens/Exchange'
@@ -12,10 +12,9 @@ export default class App extends React.Component {
   render() {
     return (
 
-      <View>
 
-        <AppContainer />
-      </View>
+      <AppContainer />
+
 
     )
   }
@@ -35,9 +34,10 @@ const BottomTab = createBottomTabNavigator(
 
         const routeName = navigation.state.routeName;
 
-        if (routeName === 'HomePage') {
+        if (routeName === "HomePage") {
 
           return (
+
             <Image
 
               style={{ width: 30, height: 30 }}
@@ -48,7 +48,7 @@ const BottomTab = createBottomTabNavigator(
           )
         }
 
-        else if (routeName === 'ExchangePage') {
+        else if (routeName === "ExchangePage") {
           return (
 
             <Image

@@ -156,7 +156,7 @@ export default class login extends React.Component {
             "Contact": this.state.ContactNumber,
             "Password": this.state.Password,
             "ConfirmPassword": this.state.ConfirmPassword,
-           
+
           });
 
           return Alert.alert(

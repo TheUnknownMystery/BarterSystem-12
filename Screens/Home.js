@@ -6,7 +6,7 @@ export default class Home extends React.Component {
  render() {
   return (
 
-   <View style={{ backgroundColor: 'red' }}>
+   <View style = {{alignSelf: 'center'}}>
 
     <View>
 
@@ -68,11 +68,11 @@ const styles = StyleSheet.create({
 
   alignSelf: 'center',
   alignItems: 'center',
-  borderWidth: 2.0,
+  borderWidth: 3.0,
   borderRadius: 4,
   borderColor: 'lightpink',
   marginTop: 100,
-  width: '30%',
+  width: 500,
   height: 39,
  },
 
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   marginTop: 20,
   height: 200,
   width: 500,
-  borderWidth: 1.0,
+  borderWidth: 3.0,
   paddingLeft: 4,
   fontWeight: 'bold'
  },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   borderRadius: 3,
   borderColor: '#FAA353',
   marginTop: 10,
-  width: '10%',
+  width: '20%',
   height: 30,
 
 
