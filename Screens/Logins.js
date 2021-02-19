@@ -193,6 +193,7 @@ export default class login extends React.Component {
 
           alert("Login Sucessful")
           this.props.navigation.navigate("HomePage")
+          
 
         }
       }

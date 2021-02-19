@@ -14,8 +14,8 @@ export default class Exchange extends React.Component {
 
    db.collection("AddedItem").add({
 
-   'Item_Name': this.state.ItemName,
-   'Item_Definition': this.state.ItemDescription
+    'Item_Name': this.state.ItemName,
+    'Item_Definition': this.state.ItemDescription
 
    })
   }
@@ -36,8 +36,8 @@ export default class Exchange extends React.Component {
 
   return (
 
-   <View style={{ alignSelf: 'center' }}>
-
+   <View style={{ alignSelf: 'center', marginTop: 100 }}>
+   
     <View>
 
      <Text style={{ alignItems: 'center', fontWeight: 'bold', fontSize: 40, alignSelf: 'center' }}>Add Item To Donate</Text>
@@ -50,6 +50,7 @@ export default class Exchange extends React.Component {
 
       style={styles.TextInputStyle}
       placeholder="Item Name"
+      maxLength={10}
 
       onChangeText={(text) => {
 
@@ -66,6 +67,7 @@ export default class Exchange extends React.Component {
 
       style={styles.TextInputStyleDescription}
       placeholder="Description Of the Item"
+      maxLength={150}
 
       onChangeText={(text) => {
 
@@ -116,7 +118,7 @@ const styles = StyleSheet.create({
   borderRadius: 4,
   borderColor: 'lightpink',
   marginTop: 100,
-  width: 500,
+  width: 300,
   height: 39,
  },
 
@@ -130,7 +132,7 @@ const styles = StyleSheet.create({
   width: '30%',
   marginTop: 20,
   height: 200,
-  width: 500,
+  width: 300,
   borderWidth: 3.0,
   paddingLeft: 4,
   fontWeight: 'bold'

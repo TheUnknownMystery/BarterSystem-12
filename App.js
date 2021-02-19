@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
-import { BottomTabBar, createBottomTabNavigator } from 'react-navigation-tabs'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
 import LoginScreen from './Screens/Logins'
 import Home from './Screens/Home'
 import Exchange from './Screens/Exchange'
@@ -13,7 +13,7 @@ export default class App extends React.Component {
     return (
 
 
-      <AppContainer />
+      <AppContainer/>
 
 
     )
